@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Meter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="taxi-ui" class="hidden">
+        <div class="taxi-container">
+            <div class="taxi-header">
+                <img src="img/taxi-logo.png" alt="Taxi Logo" class="taxi-logo">
+                <h1>Taxi Meter</h1>
+            </div>
+            <div class="taxi-content">
+                <div class="meter-status">
+                    <span id="status-text">INACTIVE</span>
+                </div>
+                <div class="meter-info">
+                    <div class="info-row">
+                        <span class="info-label">Base Fare:</span>
+                        <span class="info-value" id="base-fare">$0</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Distance:</span>
+                        <span class="info-value" id="distance">0.0 km</span>
+                    </div>
+                    <div class="info-row total-fare">
+                        <span class="info-label">Total Fare:</span>
+                        <span class="info-value" id="total-fare">$0</span>
+                    </div>
+                </div>
+                <div class="meter-controls">
+                    <button id="toggle-meter" class="meter-button start">Start Meter</button>
+                    <button id="reset-meter" class="meter-button reset">Reset</button>
+                    <button id="collect-payment" class="meter-button collect">Collect Payment</button>
+                </div>
+            </div>
+            <div class="taxi-footer">
+                <span id="duty-status">OFF DUTY</span>
+                <span class="key-hint">Press F7 to toggle UI</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

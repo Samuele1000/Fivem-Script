@@ -1,0 +1,205 @@
+/* Taxi Job UI Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#taxi-ui {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 350px;
+    z-index: 999;
+}
+
+.taxi-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid #f8c000;
+}
+
+.taxi-header {
+    background-color: #f8c000;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.taxi-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.taxi-header h1 {
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.taxi-content {
+    padding: 20px;
+    color: #fff;
+}
+
+.meter-status {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.meter-status span {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.meter-status span.active {
+    color: #4CAF50;
+}
+
+.meter-status span.inactive {
+    color: #f44336;
+}
+
+.meter-info {
+    margin-bottom: 20px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #444;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 500;
+    color: #ccc;
+}
+
+.info-value {
+    font-weight: 700;
+    color: #fff;
+}
+
+.total-fare {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 2px solid #f8c000;
+}
+
+.total-fare .info-label,
+.total-fare .info-value {
+    font-size: 18px;
+    color: #f8c000;
+}
+
+.meter-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.meter-button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.meter-button:hover {
+    opacity: 0.9;
+}
+
+.meter-button.start {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.meter-button.stop {
+    background-color: #f44336;
+    color: white;
+}
+
+.meter-button.reset {
+    background-color: #2196F3;
+    color: white;
+}
+
+.meter-button.collect {
+    background-color: #f8c000;
+    color: black;
+}
+
+.taxi-footer {
+    background-color: #222;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #ccc;
+}
+
+#duty-status {
+    font-weight: 700;
+    color: #f44336;
+}
+
+#duty-status.on-duty {
+    color: #4CAF50;
+}
+
+.key-hint {
+    font-style: italic;
+    opacity: 0.7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #taxi-ui {
+        width: 300px;
+    }
+    
+    .taxi-header h1 {
+        font-size: 20px;
+    }
+    
+    .meter-button {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
